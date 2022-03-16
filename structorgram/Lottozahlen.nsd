@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-04" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="aminr" created="2022-03-15" changedby="aminr" changed="2022-03-15" origin="Structorizer 3.31-04" text="&#34;Lottozahlen&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;zahlen &#60;- {0,0,0,0,0,0}&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<for text="&#34;for i &#60;- 0 to 5&#34;" comment="&#34;&#34;" counterVar="i" startValue="0" endValue="5" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+			<qFor>
+				<instruction text="&#34;int rand &#60;- random(49) + 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<for text="&#34;for j &#60;- i to 0 by -1&#34;" comment="&#34;&#34;" counterVar="j" startValue="i" endValue="0" stepConst="-1" style="COUNTER" color="ffffff" disabled="0">
+					<qFor>
+						<alternative text="&#34;rand == zahlen[j]&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;i &#60;- i - 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;zahlen[i] &#60;- rand&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFor>
+				</for>
+			</qFor>
+		</for>
+		<instruction text="&#34;output zahlen&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>
