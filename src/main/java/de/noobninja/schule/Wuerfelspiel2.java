@@ -6,7 +6,6 @@ import java.util.Random;
 public class Wuerfelspiel2 {
     public static void main(String[] args) throws InterruptedException {
         int score = 0;
-        System.out.println("Starting...");
         Random random = new Random();
         for (int i = 1; i < 6; i++) {
             Thread.sleep(1000);
@@ -14,6 +13,6 @@ public class Wuerfelspiel2 {
             score = (dice == 3) ?  0 : score + dice;
             System.out.println(i +" Wurf: Du hast eine " + dice + " gewürfelt. Deine Punktezahl ist " + score);
         }
-        System.out.println("Exiting...");
+        System.out.println("Deine Punktezahl beträgt " + score);
     }
 }

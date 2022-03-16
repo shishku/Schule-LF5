@@ -3,9 +3,9 @@ package de.noobninja.schule;
 import java.util.Random;
 import java.util.Scanner;
 
-/* LF05 - FIAE-SR/TU-21/22 *** Schleifen *** Zahlenraten */
+/* LF05 - FIAE-SR/TU-21/22 *** Schleifen *** Aufgabe Zahlenraten */
 public class Zahlenraten {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         int zahl;
         int counter = 0;
         Random random = new Random();

@@ -27,7 +27,7 @@ public class Primzahl {
                             "Bitte geben Sie eine Zahl größer als 0 ein oder \\q zum Abbrechen oder \\l, um deine Eingaben anzusehen");
                 else {
                     int value = Integer.parseInt(input);
-                    for (int i = 2; i < value - 1; i++) {
+                    for (int i = 2; i < value / 2 ; i++) {
                         if (value % i == 0) {
                             System.out.println("Die Zahl " + value + " ist keine Primzahl");
                             continue outerLoop;
