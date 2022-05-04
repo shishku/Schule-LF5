@@ -7,15 +7,15 @@ import static java.lang.Math.max;
 public class Kenntwortpruefung {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int sicherheitNiveau = 0;
         boolean lengthCheck = false;
         boolean numCheck = false;
         boolean capCheck = false;
         boolean specialCheck = false;
         String specialChars = "!§$%&()=?+*#,;.:-_<>";
         String[] array = {"unsicher", "teilweise unsicher", "teilweise sicher", "sicher"};
-        int sicherheitNiveau = 0;
         System.out.print("Geben Sie das zu prüfunde Kenntwort ein:");
+        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         /*
         if (input.matches(".*\\d.*")) sicherheitNiveau++;
